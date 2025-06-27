@@ -1,4 +1,4 @@
-import { HardhatUserConfig } from "hardhat/config";
+{"txID":"685235b8b6604f1bcf3476282f56fbb5c6e84a583b99ad931c8cb31fa07ddb59","raw_data":{"contract":[{"parameter":{"value":{"amount":706000000,"owner_address":"41e28b3cfd4e0e909077821478e9fcb86b84be786e","to_address":"41296ec9963dc7545e57f5b28dc4b96e532dc9f165"},"type_url":"type.googleapis.com\/protocol.TransferContract"},"type":"TransferContract"}],"ref_block_bytes":"beec","ref_block_hash":"47af5bf8619d8ea7","expiration":1751005795974,"timestamp":1751005495974},"raw_data_hex":"0a02beec220847af5bf8619d8ea74086add080fb325a69080112650a2d747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e5472616e73666572436f6e747261637412340a1541e28b3cfd4e0e909077821478e9fcb86b84be786e121541296ec9963dc7545e57f5b28dc4b96e532dc9f1651880e9d2d00270a685be80fb32","visible":false,"useTronHeader":true,"signature":{}}import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import '@okxweb3/hardhat-explorer-verify';  // Import the plugin
 
