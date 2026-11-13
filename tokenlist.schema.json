@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Token entry",
+  "description": "Structure of one token entry in tokenlist.json. Field rules follow the \"Adding new token\" section of README.md.",
+  "type": "object",
+  "required": [
+    "address",
+    "symbol",
+    "name",
+    "logoURI",
+    "homepage",
+    "existingMarkets"
+  ],
+  "properties": {
+    "address": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^\\S+$"
+    },
+    "symbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decimals": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 77
+    },
+    "logoURI": {
+      "type": "string",
+      "pattern": "^https?://\\S+$"
+    },
+    "homepage": {
+      "type": "string",
+      "pattern": "^https?://\\S+$"
+    },
+    "MarketCapLink": {
+      "type": "string",
+      "pattern": "^https?://\\S+$"
+    },
+    "existingMarkets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source", "pairs"],
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "pairs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
